@@ -1,0 +1,16 @@
+<p>
+  inventory-all-grid works!
+</p>
+
+
+<div *ngIf="inventory$" class="inventory-container">
+
+  <div *ngFor="let item of inventory$ | async" class="inventory-li" #inventoryElement>
+    <p>{{item.id}}</p>
+    <p>{{item.item_name}}</p>
+    <p>{{item.item_price}}</p>
+  </div>
+
+  <!-- {{ inventory$ | async }} -->
+
+</div>
